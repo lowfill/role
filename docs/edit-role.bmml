@@ -1,0 +1,63 @@
+<mockup version="1.0" skin="sketch" measuredW="933" measuredH="441" mockupW="821" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="102" y="31" w="821" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Elgg%20role%20administration%0Ahttp%3A//localhost/pg/admin/role</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="133" y="124" w="748" h="269" measuredW="200" measuredH="269" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistics%0ASite%20administration%0AUser%20administration%0ATools%20administration%0ASystem%20diagnostics%0AUnit%20Tests%0ARole%20administration</text>
+        <selectedIndex>6</selectedIndex>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TabBar" x="285" y="144" w="581" h="228" measuredW="262" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Available%20roles%2C%20Edit%20role</text>
+        <selectedIndex>1</selectedIndex>
+        <hrefs>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml%2C</hrefs>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="300" y="193" w="-1" h="-1" measuredW="79" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Role%27s%20name</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="394" y="190" w="178" h="-1" measuredW="53" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Role%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="304" y="225" w="-1" h="-1" measuredW="77" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Assigned%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::SearchBox" x="300" y="250" w="133" h="-1" measuredW="130" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search%20user</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="447" y="250" w="-1" h="-1" measuredW="33" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>+</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::ComboBox" x="489" y="251" w="-1" h="-1" measuredW="76" measuredH="72" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>User%201%0AUser%202%0AUser%203</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="491" y="338" w="-1" h="-1" measuredW="73" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+        <icon>SaveIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="447" y="278" w="-1" h="-1" measuredW="32" measuredH="28" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

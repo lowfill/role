@@ -1,0 +1,27 @@
+<mockup version="1.0" skin="sketch" measuredW="933" measuredH="441" mockupW="821" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="102" y="31" w="821" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Elgg%20role%20administration%0Ahttp%3A//localhost/pg/admin/role</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="133" y="124" w="748" h="269" measuredW="200" measuredH="269" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistics%0ASite%20administration%0AUser%20administration%0ATools%20administration%0ASystem%20diagnostics%0AUnit%20Tests%0ARole%20administration</text>
+        <selectedIndex>6</selectedIndex>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TabBar" x="285" y="144" w="581" h="228" measuredW="262" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Available%20roles%2C%20Add%20role</text>
+        <selectedIndex>0</selectedIndex>
+        <hrefs>%2Cadd-role%26bm%3Badd-role.bmml%26bm%3Badd-role.bmml%26bm%3Badd-role.bmml</hrefs>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::DataGrid" x="300" y="182" w="550" h="169" measuredW="273" measuredH="128" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Role%27s%20name%2C%20Assigned%20to%2C%20%0ARole%201%2C%20user1%5Cruser2%5Cruser3%20%2C%20%5Bedit%5D%20%5Bdelete%5D%0ARole%202%2C%20user%204%5Cruser1%2C%20%5Bedit%5D%20%5Bdelete%5D</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
