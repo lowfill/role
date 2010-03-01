@@ -6,7 +6,7 @@
  */
 
 function role_init(){
-    register_plugin_hook('display', 'view', 'role_profile_links_overwrite_hook');
+//1    register_plugin_hook('display', 'view', 'role_profile_links_overwrite_hook');
     register_page_handler('roles','role_page_handler');
 }
 
