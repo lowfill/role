@@ -1,0 +1,4 @@
+Version 1.1
+	Compatibility with Elgg 1.5
+Version 1.0
+	Initial Version
