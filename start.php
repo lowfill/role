@@ -6,25 +6,24 @@
  */
 
 function role_init(){
-//1    register_plugin_hook('display', 'view', 'role_profile_links_overwrite_hook');
+    //1    register_plugin_hook('display', 'view', 'role_profile_links_overwrite_hook');
     register_page_handler('roles','role_page_handler');
 }
 
 function role_pagesetup(){
     if (get_context() == 'admin' && isadminloggedin()) {
         global $CONFIG;
-        add_submenu_item(elgg_echo('role:admin'), $CONFIG->wwwroot . 'pg/roles/admin',"r");
+        add_submenu_item(elgg_echo('role:admin'), $CONFIG->wwwroot . 'pg/roles/',"r");
 
     }
 }
 
 function role_page_handler($page){
-    if(isset($page[0])){
-        if($page[0]=="admin"){
-            @include (dirname(__FILE__)."/roleadmin.php");
-            exit;
-        }
+    if(count($page)==1){
+        set_input('section',$page[0]);
     }
+    @include (dirname(__FILE__)."/index.php");
+    exit;
 }
 
 function role_add_role($name,$contexts = array()){
