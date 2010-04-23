@@ -18,7 +18,6 @@ $section = (empty($section))?'index':$section;
 $title = elgg_echo("role:admin");
 
 $area2 = elgg_view_title($title);
-error_log($section);
 $params = array('body' => elgg_view("role/$section"));
 
 $area2 .= elgg_view('page_elements/contentwrapper', $params);

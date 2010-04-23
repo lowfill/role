@@ -8,6 +8,11 @@
 function role_init(){
     //1    register_plugin_hook('display', 'view', 'role_profile_links_overwrite_hook');
     register_page_handler('roles','role_page_handler');
+
+    register_action('role/add',false,dirname(__FILE__)."/actions/add.php",true);
+    register_action('role/edit',false,dirname(__FILE__)."/actions/edit.php",true);
+    register_action('role/delete',false,dirname(__FILE__)."/actions/delete.php",true);
+    register_action('role/assign',false,dirname(__FILE__)."/actions/assign.php",true);
 }
 
 function role_pagesetup(){
@@ -19,60 +24,16 @@ function role_pagesetup(){
 }
 
 function role_page_handler($page){
-    if(count($page)==1){
+    if(count($page)>=1){
         set_input('section',$page[0]);
+        if(count($page)>=2){
+            set_input('role_guid',$page[1]);
+        }
     }
     @include (dirname(__FILE__)."/index.php");
     exit;
 }
 
-function role_add_role($name,$contexts = array()){
-
-    $role_count = get_entities_from_metadata('name',$name,'object','role',0,1,0,'',0,true);
-    if($role_count==0){
-        $role = new ElggObject();
-        $role->type='role';
-        $role->name=$name;
-        return $role->save();
-        //@todo Add contexts config when it is provided
-    }
-    return false;
-}
-
-
-function role_add_role_context($role_id,$context){
-    //@todo Implement this
-}
-
-function role_assign_role($user_id, $role_id){
-    $user = get_entity($user_id);
-    $role = get_entity($role_id);
-
-    if($user instanceof ElggUser){
-        $roles = $user->role;
-        if(!is_array($roles)){
-            $roles = array($roles);
-        }
-        if(!in_array($role->name,$roles)){
-            create_metadata($user->guid,'role',$role->name,'text',$user->guid,ACCESS_PRIVATE,true);
-            return true;
-        }
-    }
-    return false;
-}
-
-
-function remove_role($user_id,$role_id){
-    $user = get_entity($user_id);
-    $role = get_entity($role_id);
-    if($user instanceof ElggUser){
-        $roles = $user->role;
-        $roles = array_diff($roles,array($role->name));
-        $user->role=$roles;
-        return true;
-    }
-    return false;
-}
 
 function role_has_role($roles,$user=null){
     if(empty($user)){
@@ -90,6 +51,75 @@ function role_has_role($roles,$user=null){
         return (in_array($role,$user_roles));
     }
     return false;
+}
+
+function role_plugins(){
+    $plugins = get_installed_plugins();
+    $plugins = array_keys($plugins);
+
+//TODO Make the plugin autodiscover 'types' of plugins
+    $ignored = array(
+        'profile',
+        'groups',
+        'notifications',
+        'messageboard',
+        'htmlawed',
+        'uservalidationbyemail',
+    	'blog',
+        'friends',
+        'messages',
+//        'members',
+        'file',
+        'tidypics',
+        'tinymce',
+        'embed',
+        'reportedcontent',
+        'riverdashboard',
+        'thewire',
+        'categories',
+        'pages',
+        'guidtool',
+        'logbrowser',
+        'garbagecollector',
+        'logrotate',
+        'crontrigger',
+        'diagnostics',
+        'captcha',
+        'zaudio',
+        'externalpages',
+        'friendsuggest',
+        'blogextended',
+        'groupextended',
+        'multisuggest',
+        'messagesextended',
+        'directory',
+        'badges',
+        'events',
+        'itemicon',
+        'productos_servicios',
+        'counter',
+        'grouplayout',
+        'gmaplocationfield',
+        'content_box',
+        'role',
+        'bavaria_profile',
+        'bavaria_sectores',
+        'bavaria_business',
+        'bavaria_concurso',
+        'o2obasetheme',
+        'libform_utils',
+        'fb_socialplugins',
+        'marketplace',
+        'bavariatheme2',
+        'twitter',
+        'custom_index',
+        'defaultwidgets',
+        'bookmarks',
+        'invitefriends',
+        'twitterservice',
+        'bavariatheme'
+    );
+    return array_diff($plugins,$ignored);
 }
 
 //@todo Get JS profile/menu/links and profile/menu/links
